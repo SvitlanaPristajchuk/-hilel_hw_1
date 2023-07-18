@@ -135,7 +135,7 @@ table {
 }
 
 
-table,
+table, tbody,
 th,
 td {
 	border: 1px solid red;
