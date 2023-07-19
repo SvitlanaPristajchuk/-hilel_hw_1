@@ -142,6 +142,10 @@ td {
 	padding: 10px;
 }
 
+
 tr:nth-child(even) {
 	background: aqua;
+}
+thead>tr{
+background: gray
 }

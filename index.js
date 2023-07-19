@@ -72,7 +72,7 @@ document.write(`<table class="data">
 
 document.write(`<table class="data">
     <thead>
-        <tr>
+        <tr class='header'>
             <th>Operation</th>
             <th>Expresion</th>
             <th>Value</th>
