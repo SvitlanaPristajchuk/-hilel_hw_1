@@ -27,13 +27,13 @@ console.log(thirdValue, 'thirdValue');
 
 
 
-resultSum = ((diapasonRandomValue + thirdValue).toFixed(2));
+resultSum = +((diapasonRandomValue + thirdValue).toFixed(2));
 console.log(resultSum);
-resultSub = ((diapasonRandomValue - thirdValue).toFixed(2));
+resultSub = +((diapasonRandomValue - thirdValue).toFixed(2));
 console.log(resultSub)
-resultMult = ((diapasonRandomValue * thirdValue).toFixed(2));
+resultMult = +((diapasonRandomValue * thirdValue).toFixed(2));
 console.log(resultMult)
-resultDiv = ((diapasonRandomValue / thirdValue).toFixed(2));
+resultDiv = +((diapasonRandomValue / thirdValue).toFixed(2));
 console.log(resultDiv)
 
 
