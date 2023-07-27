@@ -1,5 +1,4 @@
 userName = prompt('Enter your name, pls');
-
 if (userName === null || userName === '') {
     alert(userName = `Your name 😌`);
 } else (userName !== null && userName !== ''); {
@@ -16,10 +15,11 @@ if (userFullName === null || userFullName === '') {
 }
 console.log(userFullName)
 
-/*3*/
+
 
 
 userEmail = prompt('Enter your email, pls')
+errorMsg = 'not valid email'
 
 if (userEmail !== null) {
     userEmail = userEmail.replaceAll(' ', '').toLowerCase()
@@ -29,28 +29,44 @@ if (userEmail === null || userEmail === '') {
 };
 
 
-if (userEmail.includes('@') === false) {
+if (!userEmail.includes('@')) {
     userEmail = `not valid email <b>${userEmail}</b> (symbol @ not exist)`;
-} else
-    if (userEmail.startsWith('@') && userEmail.endsWith('@')) {
-        userEmail = ` not valid email ${userEmail} (symbol @ find in first place, symbol @ find in last place).`
-    } else
-        if (userEmail.startsWith('@')) {
-            userEmail = `not valid email <b>${userEmail}</b> (symbol @ find in first place)`
-        } else
-            if (userEmail.endsWith('@')) {
-                userEmail = `not valid email <b>${userEmail}</b> (symbol @ find in last place)`
-            }
+}
+if (userEmail.startsWith('@') && userEmail.endsWith('@')) {
+    userEmail = ` ${errorMsg} ${userEmail} (symbol @ find in first place, symbol @ find in last place).`
+}
+
+if (userEmail.startsWith('@')) {
+    userEmail = `${errorMsg}${userEmail}(symbol @ find in first place)`
+}
+if (userEmail.endsWith('@')) {
+    userEmail = `${errorMsg} <b>${userEmail}</b> (symbol @ find in last place)`
+}
 
 
-console.log(userEmail)
+userBirthData = prompt('Enter your year of birth')
+userAge = 0;
+
+console.log(typeof (userBirthData))
+
+if (userBirthData !== null) {
+    userBirthData = userBirthData.replaceAll(' ', '');
+    userBirthData = +userBirthData
+    console.log(typeof (userBirthData))
+}
+if (userBirthData === null) {
+    userBirthData = ` Your year of birth 😌`
+} else if (userBirthData === '') {
+    userBirthData = ` Your year of birth 😌`
+    console.log(typeof (userBirthData))
+} else { userAge = (new Date().getFullYear()) - userBirthData }
+console.log(userBirthData)
 
 
 document.write(`
 <ul>
-<li>User name: ${userName}</li>
-<li>User full name: ${userFullName}</li>
-<li>User email: ${userEmail}</li>
-
+<li>Full name: ${userName} ${userFullName}</li>
+<li>Email: ${userEmail}</li>
+<li>Age: ${userAge}</li>
 </ul >
     `)
