@@ -4,12 +4,13 @@ prompt(firstRandomValue);
 console.log(firstRandomValue);*/
 
 //1
+debugger;
 
-firstValue = prompt(`Enter first number`, 1000.9898787);
+firstValue = prompt(`Enter first number`,);
 firstValue = +(parseFloat(firstValue).toFixed(2));
 console.log(firstValue, 'firstValue');
 //2
-secondValue = prompt(`Enter second number`, 30.78965);
+secondValue = prompt(`Enter second number`, );
 secondValue = +(parseFloat(secondValue).toFixed(2));
 console.log(secondValue, 'secondValue');
 
@@ -68,7 +69,7 @@ document.write(`<table class="data">
         </thead>
     </table>`);*/
 
-    5.
+5.
 
 document.write(`<table class="data">
     <thead>
