@@ -54,7 +54,7 @@ if (userBirthData !== null) {
     userBirthData = +userBirthData
     console.log(typeof (userBirthData))
 }
-if (userBirthData <= 0 || isNaN(userBirthData)) {
+if (userBirthData === null) {
     userBirthData = ` Your year of birth 😌`
 }
 if (userBirthData === '') {

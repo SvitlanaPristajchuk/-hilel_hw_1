@@ -1,2 +1,4 @@
 userQuestion = confirm(`Tell me three most important words 💚`)
-console.log(userQuestion)
+if (userQuestion !== null) {
+    console.log(userQuestion)
+}
