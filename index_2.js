@@ -54,9 +54,10 @@ if (userBirthData !== null) {
     userBirthData = +userBirthData
     console.log(typeof (userBirthData))
 }
-if (userBirthData === null) {
+if (userBirthData <= 0 || isNaN(userBirthData)) {
     userBirthData = ` Your year of birth 😌`
-} else if (userBirthData === '') {
+}
+if (userBirthData === '') {
     userBirthData = ` Your year of birth 😌`
     console.log(typeof (userBirthData))
 } else { userAge = (new Date().getFullYear()) - userBirthData }
