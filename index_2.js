@@ -26,21 +26,20 @@ errorMsg = 'not valid email'
 
 if (userEmail === null || userEmail.replaceAll(' ', '') || userEmail === '') {
     userEmail = 'email not defined'
-} else (userEmail = userEmail.replaceAll(' ', '').toLowerCase())
+} else {
+    userEmail = userEmail.replaceAll(' ', '').toLowerCase()
 
-
-
-if (!userEmail.includes('@')) {
-    userEmail = `not valid email <b>${userEmail}</b> (symbol @ not exist)`;
+    if (!userEmail.includes('@')) {
+        userEmail = `not valid email <b>${userEmail}</b> (symbol @ not exist)`;
+    }
+    if (userEmail.startsWith('@') && userEmail.endsWith('@')) {
+        userEmail = ` ${errorMsg} ${userEmail} (symbol @ find in first place, symbol @ find in last place).`
+    } else if (userEmail.startsWith('@')) {
+        userEmail = `${errorMsg}${userEmail}(symbol @ find in first place)`
+    } else if (userEmail.endsWith('@')) {
+        userEmail = `${errorMsg} <b>${userEmail}</b> (symbol @ find in last place)`
+    }
 }
-if (userEmail.startsWith('@') && userEmail.endsWith('@')) {
-    userEmail = ` ${errorMsg} ${userEmail} (symbol @ find in first place, symbol @ find in last place).`
-} else if (userEmail.startsWith('@')) {
-    userEmail = `${errorMsg}${userEmail}(symbol @ find in first place)`
-} else if (userEmail.endsWith('@')) {
-    userEmail = `${errorMsg} <b>${userEmail}</b> (symbol @ find in last place)`
-}
-
 
 userBirthData = prompt('Enter your year of birth')
 userAge = 0;
